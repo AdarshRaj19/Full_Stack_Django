@@ -1,0 +1,69 @@
+PS F:\ipecbatch2> git --version
+git version 2.51.2.windows.1
+PS F:\ipecbatch2> git init
+Initialized empty Git repository in F:/ipecbatch2/.git/
+PS F:\ipecbatch2> git add .
+PS F:\ipecbatch2> notepad .gitignore
+PS F:\ipecbatch2> git add .
+PS F:\ipecbatch2> git commit -m "Initial project commit"
+[master (root-commit) 4baea26] Initial project commit
+ 145 files changed, 4204 insertions(+)
+ PS F:\ipecbatch2> git remote add origin https://github.com/AdarshRaj19/Full_Stack_Django.git  
+PS F:\ipecbatch2> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/AdarshRaj19/Full_Stack_Django.git'
+PS F:\ipecbatch2> git branch
+* master
+PS F:\ipecbatch2> git add .
+PS F:\ipecbatch2> git commit -m "Initial commit"
+On branch master
+nothing to commit, working tree clean
+PS F:\ipecbatch2> git branch -M main
+PS F:\ipecbatch2> git push -u origin main
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (146/146), done.
+Writing objects: 100% (152/152), 377.57 KiB | 2.34 MiB/s, done.
+Total 152 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (146/146), done.
+Writing objects: 100% (152/152), 377.57 KiB | 2.34 MiB/s, done.
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (146/146), done.
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Delta compression using up to 4 threads
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Enumerating objects: 152, done.
+Enumerating objects: 152, done.
+Enumerating objects: 152, done.
+Counting objects: 100% (152/152), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (146/146), done.
+Writing objects: 100% (152/152), 377.57 KiB | 2.34 MiB/s, done.
+Total 152 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (36/36), done.
+To https://github.com/AdarshRaj19/Full_Stack_Django.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS F:\ipecbatch2>
+
+🛠 Case 1: No commit yet (most common)
+Do this:
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
+
+🛠 Case 2: Branch is master
+Do this:
+git branch -M main
+git push -u origin main

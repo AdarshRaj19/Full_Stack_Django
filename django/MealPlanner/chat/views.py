@@ -15,7 +15,7 @@ def meal_view(request):
             meal_purpose = form.cleaned_data['meal_purpose']
             # You can add your logic to handle the data here
             prompt = f"I am a {age} year old person, weighing {weight} kg and {height} cm tall. I want a {meal_type} meal for {meal_purpose} in {location}. Give me a weekily meal plan.Generate a table with days as row and breakfast, lunch, dinner as columns. Also include a grocery list. Genertae only table tags and its elements not html"
-            client = genai.Client(api_key="AIzaSyAPdzj1GCwa-R_siUTiqZ8VilBgQkW6jm0")
+            client = genai.Client(api_key="   YOUR_API_KEY")
             response = client.models.generate_content(model = "gemini-2.5-flash",contents = prompt)
 
             return render(request, 'meal_form.html', {'form': form, 'response': response.text})
