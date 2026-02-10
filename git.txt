@@ -56,6 +56,13 @@ To https://github.com/AdarshRaj19/Full_Stack_Django.git
 branch 'main' set up to track 'origin/main'.
 PS F:\ipecbatch2>
 
+git status
+git add .
+git commit -m "message"
+git push
+
+
+
 🛠 Case 1: No commit yet (most common)
 Do this:
 git add .
