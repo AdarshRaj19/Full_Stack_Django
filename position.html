@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 200px;
+            margin: 2px;
+            padding: 2px;
+            background-color: aqua;
+        }
+
+        .box{
+            display: inline-block;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            color: blue;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        /*relative*/
+        /*
+        #box3{
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }*/
+
+        /*absoulte*/
+        /*#box3{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }*/
+
+        /*fixed*/
+        /*#box3{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }*/
+
+        /*sticky*/
+        #box3{
+            position: sticky;
+            top: 20px;
+            left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="container">
+    <div class="box" id="box1">Virat</div>
+    <div class="box" id="box2">Rohit</div>
+    <div class="box" id="box3">Surya</div>
+    <div class="box" id="box4">Yujraj</div>
+    </div>
+</body>
+</html>

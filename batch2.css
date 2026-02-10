@@ -1,0 +1,21 @@
+h1{
+    color: blueviolet;
+    background-color: aquamarine;
+}
+
+p{
+    color: crimson;
+    background-color: darkkhaki;
+}
+#id1{
+    color: green;
+    background-color: aquamarine;
+}
+#id2{
+    color: rgb(247, 56, 13);
+    background-color: rgb(201, 237, 69);
+}
+.one{
+    color: rgb(59, 5, 86);
+    background-color: rgb(73, 186, 95);
+}

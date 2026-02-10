@@ -1,0 +1,19 @@
+PS F:\ipecbatch2\django\MealPlanner> & f:\ipecbatch2\django\MealPlanner\.venv\Scripts\Activate.ps1
+(.venv) PS F:\ipecbatch2\django\MealPlanner> pip install Django
+(.venv) PS F:\ipecbatch2\django\MealPlanner> pip install -q -U google-genai
+(.venv) PS F:\ipecbatch2\django\MealPlanner> pip list
+(.venv) PS F:\ipecbatch2\django\MealPlanner> python
+Python 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> from google import genai
+>>> client = genai.Client(api_key="Here write your gemini api key")
+>>> response = client.models.generate_content(
+...     model="gemini-2.5-flash", contents="Explain how AI works in a single line"
+... )
+>>> print(response.text)
+>>> exit()
+(.venv) PS F:\ipecbatch2\django\MealPlanner> django-admin startproject meal .
+(.venv) PS F:\ipecbatch2\django\MealPlanner> python manage.py startapp chat
+open setting.py meal folder
+do 

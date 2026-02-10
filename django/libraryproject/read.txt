@@ -1,0 +1,90 @@
+create virtual environment ny using  ctrl+shift+p 
+then choose python (create environment)
+choose python and wait and then open terminal and wait
+this comes automatically[PS F:\ipecbatch2\django\libraryproject> & f:\ipecbatch2\django\libraryproject\.venv\Scripts\Activate.ps1]
+(.venv) PS F:\ipecbatch2\django\libraryproject> pip install Djangopytho
+(.venv) PS F:\ipecbatch2\django\libraryproject> django-admin startproject library 
+(.venv) PS F:\ipecbatch2\django\libraryproject> python manage.py startapp libapp
+then create folder (templates) in base 
+create static folder in base
+open setting.py (library folder)
+then go to installed app and add name libapp
+then go to template and dir and write templates in dir[]
+create html file in template and code code it 
+go to urls.py in library folder
+import (from libapp import views)
+then go to urlpatterns and create path (path('home/',views.home, name='home')like this)
+open views.py in libapp folder
+and create (def home(request):
+    return render(request, 'home.html') like this)
+(.venv) PS F:\ipecbatch2\django\libraryproject> python manage.py runserver
+open setting.py in library
+and open the link and choose this code from the website
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/var/www/static/",  <-- this comand is used when we deploy the project and from now we delete it 
+]
+open models.py imside libapp to create model
+create a forms.py inside libapp and code into
+go to urls.py inside library
+to create path (path('addbook/', views.addbook, name='addbook'),like this)
+got to views.py inside libapp
+first import forms (this will now suggest good code using copilet) and make function for add book
+now create a addbook.html inside template and code it
+(models hum databse ke lie bnate hai , first data will go to model and then it goes to databse using form after submiting button)
+stop server ctrl + c 
+(.venv) PS F:\ipecbatch2\django\libraryproject> python manage.py makemigrations
+(.venv) PS F:\ipecbatch2\django\libraryproject> python manage.py migrate
+
+DAY 2-----------------
+
+(.venv) PS F:\ipecbatch2\django\libraryproject> python manage.py createsuperuser
+Username (leave blank to use 'admin'): admin
+Email address: admin@gmail.com
+Password: 1234
+Password (again): 1234
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(.venv) PS F:\ipecbatch2\django\libraryproject> python manage.py runserver
+open admin.py inside libapp
+now first import (from .models import Book)
+and then register model here
+open view.py and make a function view books and also first import it 
+make viewsbook.html and code it
+create base .html which is common in everywhere
+noe use this base.html by extending in all html pages
+
+make path by going urls.py
+go to views.py to make function
+
+go to setting and click on the link for documentation of database
+(.venv) PS F:\ipecbatch2\django\libraryproject> pip list (to check instal  package)
+(.venv) PS F:\ipecbatch2\django\libraryproject> pip install mysqlclient
+
+
+DAY 3-----------------------------------------------------------------------------------
+add path of login(signin,signup) in urls.py
+make functions of all inside views.py
+path()-login/
+.signup
+.signin
+views.py
+login-view
+signup-view
+logout-view
+make template for all 
+
+DAY 4-----------------------------------------------------------------------------------
+restfulapi creation
+(.venv) PS F:\ipecbatch2\django\libraryproject> pip install djangorestframework
+create searialavle inside libapp
+open view.py make functions first import (from .serializers import BookSerializer
+from rest_framework import generics
+from .models import Book) 
+urls.py open and add  path and then
+http://127.0.0.1:8000/api/books/ to see api is working or not
+
+

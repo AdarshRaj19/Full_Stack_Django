@@ -1,0 +1,48 @@
+1 day-------------->>>>>>
+
+PS F:\ipecbatch2\django> python -m venv .devn
+PS F:\ipecbatch2\django> .\.devn\Scripts\activate
+(.devn) PS F:\ipecbatch2\django>pip install django
+[notice] A new release of pip is available: 25.2 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(.devn) PS F:\ipecbatch2\django> django-admin --version
+5.2.8
+(.devn) PS F:\ipecbatch2\django> django-admin startproject demo
+(.devn) PS F:\ipecbatch2\django> cd demo
+(.devn) PS F:\ipecbatch2\django\demo> python manage.py runserver   
+Watching for file changes with StatReloader
+Performing system checks...
+(.devn) PS F:\ipecbatch2\django\demo> python .\manage.py startapp myapp
+
+
+2nd day---------->>>>>
+
+PS F:\ipecbatch2\django> & F:\ipecbatch2\django .\.devn\Scripts\Activate.ps1
+(.devn) PS F:\ipecbatch2\django> & django-admin startproject portfolio             
+(.devn) PS F:\ipecbatch2\django> cd portfolio 
+(.devn) PS F:\ipecbatch2\django\portfolio> python .\manage.py startapp user
+(.devn) PS F:\ipecbatch2\django\portfolio> python .\manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+3rd day----------->>>>>>
+Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to 
+re-enable it, run 'Import-Module PSReadLine'.
+
+PS F:\ipecbatch2\django> .\.devn\Scripts\activate
+(.devn) PS F:\ipecbatch2\django> django-admin startproject studentprofiles
+(.devn) PS F:\ipecbatch2\django> cd studentprofiles
+(.devn) PS F:\ipecbatch2\django\studentprofiles> python manage.py startapp users
+(.devn) PS F:\ipecbatch2\django\studentprofiles> python manage.py makemigrations
+(.devn) PS F:\ipecbatch2\django\studentprofiles> python manage.py migrate 
+
+(.devn) PS F:\ipecbatch2\django\studentprofiles> python manage.py createsuperuser
+Username (leave blank to use 'admin'): 
+Email address: admin@gmail.com
+Password: 
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.

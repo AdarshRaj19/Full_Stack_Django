@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+View Books | Library Management System
+{% endblock %}
+
+{% block main %}
+<div class="page-container">
+    <h2>Available Books</h2>
+
+    <div class="table-container">
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Published Date</th>
+                    <th>ISBN</th>
+                    <th>Pages</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in bookdata %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.published_date }}</td>
+                    <td>{{ book.isbn_number }}</td>
+                    <td>{{ book.pages }}</td>
+                    <td>
+                        <a href="{% url 'deletebook' book.id %}" class="delete-btn">Delete</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6">No books available</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            border: 3px solid red;
+            background-color: rgb(235, 93, 93);
+            margin-top: 10px;
+        }
+        .b2{
+            border: 3px solid rgb(0, 88, 37);
+            background-color:  rgb(57, 202, 117);;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="enter any no." id="t1">
+    <button onclick="xyz()">click me</button>
+    <div id="d1"></div>
+    <script>
+        function xyz(){
+            let n=document.getElementById('t1').value
+            let d1=document.getElementById('d1')
+            let st=""
+            for(let i=1;i<=10;i++){
+                if(i%2==0)
+                st=st+(`<p class='b1'>${n}x${i}=${n*i}</p>`)
+            else
+                st=st+(`<p class ='b2'>${n}x${i}=${n*i}</p>`)
+            }
+            d1.innerHTML =st
+        }
+    </script>
+</body>
+</html>

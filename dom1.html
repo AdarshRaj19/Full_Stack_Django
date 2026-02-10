@@ -1,0 +1,45 @@
+<!-- TODO Website with todo add and delete -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #todoList p {
+            margin: 5px 0;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Todo List</h2>
+        <input type="text" id="todoInput" placeholder="Add a new todo">
+        <button onclick="addTodo()">Add</button>
+        <div id="todoList"></div>
+    </div>
+    <script>
+        function addTodo() {
+            let todoInput = document.getElementById("todoInput");
+            let todoText = todoInput.value.trim();
+            if (todoText === "") {
+                alert("Please enter a todo item.");
+                return;
+            }
+
+            let p = document.createElement("p");
+            p.textContent = todoText;
+
+            document.getElementById("todoList").appendChild(p);
+            todoInput.value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seafood Delights</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+      <div class="container">
+        <span class="navbar-brand">Seafood Delights</span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h1 class="display-4 mb-3">Discover Seafood Recipes</h1>
+          <button class="btn btn-primary btn-lg" onclick="display()">
+            Load Recipes
+          </button>
+        </div>
+      </div>
+
+      <div id="app" class="row g-4">
+        <!-- Content will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      async function display() {
+        const appDiv = document.getElementById("app");
+
+        try {
+          appDiv.innerHTML = "";
+
+          // Fetch data
+          const response = await fetch(
+            "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
+          );
+          const data = await response.json();
+
+          // Create HTML for meals
+          const mealsHTML = data.meals
+            .map(
+              (meal) => `
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm meal-card">
+                            <img src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
+                            <div class="card-body">
+                                <h5 class="card-title">${meal.strMeal}</h5>
+                                <a href="#" class="btn btn-outline-primary">View Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                `
+            )
+            .join("");
+
+          // Display the meals
+          appDiv.innerHTML = mealsHTML;
+        } catch (error) {
+          appDiv.innerHTML = `
+                    <div class="col-12 text-center">
+                        <div class="alert alert-danger" role="alert">
+                            Error loading recipes. Please try again later.
+                        </div>
+                    </div>
+                `;
+          console.error("Error:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

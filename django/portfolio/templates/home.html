@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            height: 50px;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <a href="{% url 'profile' %}">Profile</a>
+    <a href="{% url 'skills' %}">Skills</a>
+    <a href="{% url 'project' %}">Project</a>
+    <!--
+    <h2>{{info}}</h2>
+    <h2>{{info.1}}</h2>
+    <h2>
+        {% if info.1 == 'm' %}
+        Mr. {{info.0}}
+        {% else %}
+        Mrs. {{info.0}}
+        {% endif %}
+    </h2>
+-->
+    <table border="2">
+        <thread>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thread>
+        {% for data in info %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

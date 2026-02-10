@@ -1,0 +1,4 @@
+
+install virtual environment--> 
+to activate virtual environment --> .\.myenv\Scripts\activate   ((.my then tab button to word come automatically if it comes then it also show that you are on a right folder))
+to ru file ------>python .\adressbook.py

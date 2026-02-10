@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Library Management System{% endblock %}
+
+{% block main %}
+<style>
+    .hero {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 60px 20px;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .hero p {
+        font-size: 18px;
+        opacity: 0.9;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    .card p {
+        color: #555;
+        font-size: 15px;
+    }
+
+    .footer-note {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 16px;
+        color: #666;
+    }
+</style>
+
+<div class="hero">
+    <h1>Library Management System 📚</h1>
+    <p>
+        A simple and efficient system designed to manage library records,
+        organize books, and streamline daily library operations.
+    </p>
+</div>
+
+<div class="features">
+    <div class="card">
+        <h3>📘 Book Management</h3>
+        <p>
+            Easily add, update, and maintain book records with accuracy and speed.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔍 Smart Search</h3>
+        <p>
+            Search books quickly by title, author, or other details in seconds.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📊 Organized Records</h3>
+        <p>
+            Keep all library data well-structured and accessible at all times.
+        </p>
+    </div>
+</div>
+
+<div class="footer-note">
+    <strong>Use the navigation bar above</strong> to manage the library efficiently.
+</div>
+
+{% endblock %}

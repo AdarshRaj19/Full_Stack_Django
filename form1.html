@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMPLOYEE FORM</title>
+</head>
+<body>
+
+    <h2>EMPLOYEE FORM</h2>
+
+    <form action="#" method="post">
+
+        <label for="firstname">FIRST NAME:</label><br>
+        <input type="text" id="firstname" name="firstname" placeholder="ENTER FIRST NAME" required><br><br>
+
+        <label for="lastname">LAST NAME:</label><br>
+        <input type="text" id="lastname" name="lastname" placeholder="ENTER LAST NAME" required><br><br>
+
+        <label for="dob">DATE OF BIRTH:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="phone">PHONE NUMBER:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="ENTER PHONE NUMBER" required><br><br>
+
+        <label for="department">DEPARTMENT:</label><br>
+        <select id="department" name="department" required>
+            <option value="">-- SELECT DEPARTMENT --</option>
+            <option value="HR">HR</option>
+            <option value="FINANCE">FINANCE</option>
+            <option value="SALES">SALES</option>
+            <option value="IT">IT</option>
+            <option value="MARKETING">MARKETING</option>
+        </select><br><br>
+
+        <label for="gender">GENDER:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="">-- SELECT GENDER --</option>
+            <option value="MALE">MALE</option>
+            <option value="FEMALE">FEMALE</option>
+            <option value="OTHER">OTHER</option>
+        </select><br><br>
+
+        <label for="message">MESSAGE:</label><br>
+        <textarea id="message" name="message" rows="5" cols="30" placeholder="ENTER YOUR MESSAGE HERE" required></textarea><br><br>
+
+        <input type="submit" value="SUBMIT">
+
+    </form>
+
+</body>
+</html>

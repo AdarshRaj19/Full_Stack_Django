@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+Search Books | Library Management System
+{% endblock %}
+
+{% block main %}
+<div class="page-container">
+    <h2>Search Books</h2>
+
+    <form method="GET" class="search-form">
+        <input type="text" name="q" placeholder="Enter book title or author" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if books %}
+    <div class="table-container">
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Published Date</th>
+                    <th>ISBN</th>
+                    <th>Pages</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.published_date }}</td>
+                    <td>{{ book.isbn }}</td>
+                    <td>{{ book.pages }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: aquamarine;
+            width: 100%;
+        }
+        input[type=text]:focus,input[type=password]:focus{
+            background-color:lightgreen ;
+        }
+    </style>
+</head>
+<body>
+    UserName <input type="text" id="username" placeholder="Enter username"><br><br>
+    Password <input type="password" id="password" placeholder="Enter password"><br><br>
+    <button onclick="validate()"> Sign-In</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+        function validate(){
+            let username = document.getElementById('username')
+            let password = document.getElementById('password')
+            if(username.value == "")
+                alert("UserName field can't be empty")
+            if(password.value =="")
+                alert("Paasword field is can't be empty")
+        }
+        function reset(){
+            document.getElementById('username').value=""
+            document.getElementById('password').value=""
+        }
+    </script>
+
+</body>
+</html>
